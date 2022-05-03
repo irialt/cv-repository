@@ -5,10 +5,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tp javascript</title>
-</head>
+ </head>
  <body>
-    
-  <h5> Ejercicio 1 </h5>
+  
+   
+  <h4> "Ejercicio 1" </h4> 
 
   <label for= "ej1_n1">Número 1:</label> 
   <input type="number" id="ej1_n1">
@@ -37,7 +38,7 @@
           
             //comparación
            if (ej1_n1 > ej1_n2 && ej1_n1 > ej1_n3)
-           {
+           {                                                //estas llaves sirven para abrir y cerrar { (abre)  } (cierra)
               document.getElementById('ej1_resultado'). value = "el valor " +ej1_n1+ " es el más grande";
         
            }
@@ -60,7 +61,7 @@
       }
    </script>
 
-      <h5> "Ejercicio 2" </h5>
+      <h4> "Ejercicio 2" </h4>
 
       <label for= "ejer2_v1">Valor número 1:</label> 
       <input type="number" id="ejer2_v1">
@@ -92,36 +93,257 @@
 
      </script>
 
-<h5> "Ejercicio 3" </h5>
+<h4> "Ejercicio 3" </h4>
 
  <label for= "ej3_palabra">Palabra:</label> 
  <input type="text" id="ej3_palabra">
  
  <label for= "ej3_cantidad">Repetición:</label> 
  <input type="number" id="ej3_cantidad">
-<button onclick="func_ej3()"> ejecutar </button>
+ 
+ <button onclick="func_ej3()"> ejecutar </button>
 
  <label for= "ej3_resultado">Resultado:</label> 
  <input type="text" id="ej3_resultado">
 
 
 <script>
-    function func_ej3() {
+    function func_ej3() {   //En este caso, 
 
-        let ej3_palabra= (document.getElementById('ej3_palabra').value); 
+        let ej3_palabra= (document.getElementById('ej3_palabra').value);  //pq es palabra
     
-        let ej3_cantidad= parseFloat(document.getElementById('ej3_cantidad').value)
+        let ej3_cantidad= parseFloat(document.getElementById('ej3_cantidad').value) //pq es num (parsefloat)
 
         let frase= ""
 
         for (let index = 0; index < ej3_cantidad; index++) {
-            frase= frase + ej3_palabra
+            frase= frase + ej3_palabra //contador (indicará cuantas veces se repetirá la palabra, en ese caso)
 
         }
-        document.getElementById("ej3_resultado").value= frase
+        document.getElementById("ej3_resultado").value= frase  //el valor ( palabra-número) le da el valor a la variable frase
 
     }
   
+ </script>
+
+ <h4> "Ejercicio 4" </h4>
+
+ <label for= "ej4_cel">Celsius:</label> 
+ <input type="number" id="ej4_cel">
+
+ <label for= "ej4_fahren">Fahrenheit:</label> 
+ <input type="number" id="ej4_fahren">
+
+ <button onclick="func_ej4()">Convertir</button>
+
+ <label for= "ej4_resultado">Resultado:</label> 
+   <p id="ej4_resultado"></p>  <!--no tengo input para ingresar el resultado-->
+
+ <script> 
+       function func_ej4() {
+
+        let ej4_fahren = parseFloat(document.getElementById('ej4_fahren').value);
+        let ej4_cel = parseFloat(document.getElementById('ej4_cel').value);
+ 
+       document.getElementById('ej4_resultado').value;
+
+        if (ej4_fahren != 0 && ej4_fahren != "" && ej4_cel == 0 | ej4_cel == "") { //convertir fahrenheit a celsius
+
+                result = (ej4_cel * (9/5) + 32);
+                document.getElementById('ej4_resultado').value = "Los grados Fahrenheit "+ej4_fahren+ " a Celsius son: "+result+ "℃";
+                
+         }
+
+         if (ej4_cel != 0 && ej4_cel != "" && ej4_fahren == 0 | ej4_fahren == "") { // convertir celsius a fahrenheit 
+
+                result = (ej4_fahren-32) / 1.8;
+                document.getElementById('ej4_resultado').value = "Los grados Celsius "+ej4_cel+ " a Fahrenheit son: "+result+ "℉";
+
+
+         }
+         
+      } //esta llave está para cerrar el SCRIPT     
+
+ </script>
+
+ <h4> "Ejercicio 5" </h4>
+
+ <label for= "ej5_palabra">Ingresar palabra:</label>
+ <input type="text" id="ej5_palabra">
+
+ <button onclick="func_ej5()">Calcular</button>
+
+ <label for= "ej5_result">:</label>
+ <input type="text" id="ej5_result">
+
+ <!--Tamaño: 'ciudad'.length => 6 (devuelve número de caracteres del string)!-->
+
+ <script>
+
+   function func_ej5() {
+          
+            let ej5_palabra = (document.getElementById('ej5_palabra').value);
+            let ej5_result = parseFloat(document.getElementById('ej5_result').value);  // nota: La función parseFloat() analiza un argumento (si es necesario, lo convierte en una cadena) y devuelve un número de coma flotante
+            
+
+            document.getElementById('ej5_result').value= "La palabra " +ej5_palabra+ " tiene " +ej5_palabra.length+ " letras."; 
+
+    }
+
+ </script>
+
+ <h4> "Ejercicio 6" </h4>
+
+ <label for= "ej6_num">Ingrese un número.</label>
+ <input type="number" id="ej6_num">
+
+ <button onclick="func_ej6()">Calcular</button>
+
+ <label for= "ej6_result">El número ingresado es:</label>
+ <input type="text" id="ej6_result">
+
+
+ <script>
+     function func_ej6() {
+          
+       let ej6_num= document.getElementById('ej6_num').value; 
+    
+       let ej6_result= document.getElementById('ej6_result').value; 
+
+        let número = ej6_num % 2; // módulo(%) 2 para indicar si el número ingresado es par.
+
+         if (número == 0) {
+
+              document.getElementById('ej6_result').value = "El número " +ej6_num+ " es PAR.";
+               
+
+             } else {  //{} apertura y cierre de else
+
+              document.getElementById('ej6_result').value = "El número" +ej6_num+ " es IMPAR.";
+                
+
+         } //cierre if
+
+       }
+
+
+ </script>
+
+ <h4> "Ejercicio 7" </h4>
+
+ <label for= "ej7_num1">Número 1</label>
+ <input type="number" id="ej7_num1">
+
+ <label for= "ej7_num2">Número 2</label>
+ <input type="number" id="ej7_num2">
+
+   <button onclick="func_ej7()">Calcular</button>
+
+ <label for= "ej7_result">Múltiplos:</label>
+ <input type="text" id="ej7_result">
+
+ <script>
+
+   function func_ej7(){
+
+      let ej7_num1= parseInt(document.getElementById('ej7_num1').value); //parseInt= para números enteros. 
+
+      let ej7_num2= parseInt(document.getElementById('ej7_num2').value);
+
+
+      document.getElementById("ej7_result").value= múltiplos
+   }
+
+ </script>
+
+ <h4> "Ejercicio 8" </h4>
+
+ <label for="ej8_numing">Num ingresado: </label>
+ <input type="number" id="ej8_numing">  <!--número ingresado-->
+
+  <button onclick="func_ej8()">Mostrar</button>
+
+  <label for= "ej8_result">Resultado:</label>
+  <input type="text" id="ej8_result">
+ 
+
+ <script>
+
+   function func_ej8(){
+
+      let ej8_numing= parseFloat(document.getElementById('ej8_numing').value); 
+
+      let ej8_result= document.getElementById('ej8_result').value;
+      
+      let num_primo = ej8_numing;
+
+    
+
+
+    }
+
+  </script>
+
+ <h4> "Ejercicio 9" </h4>
+
+ <label for= "ej9_name">Ingrese su nombre:</label>
+ <input type="text" id="ej9_name">
+
+ <label for= "ej9_ape">Ingrese su apellido:</label>
+ <input type="text" id="ej9_ape">
+
+ <label for= "ej9_age">Ingrese su edad:</label>
+ <input type="text" id="ej9_age">
+
+ <label for= "ej9_city">Ingrese cuidad de nacimiento:</label>
+ <input type="text" id="ej9_city">
+
+ <button onclick="func_ej9()">Ver frase:</button>
+
+ <label for= "ej9_frase"></label>
+ <input type="text" id="ej9_frase">
+ 
+ <script> 
+    function func_ej9(){
+
+      let ej9_name= document.getElementById('ej9_name').value; //todo dentro de let
+         ej9_ape= document.getElementById('ej9_ape').value;  //
+         ej9_age= document.getElementById('ej9_age').value;   //
+         ej9_city= document.getElementById('ej9_city').value;  //
+
+     ej9_frase= document.getElementById('ej9_frase').value= "Mi nombre es " +ej9_name+ " " + ej9_ape+ ", tengo " +ej9_age+ " años. Nací en la ciudad de "+ej9_city+".";
+
+    }
+
+
+ </script>
+
+  <h4> "Ejercicio 10" </h4>
+
+  <label for= "ej10_v1">Número 1</label>
+  <input type="number" id="ej10_v1">
+ 
+  <label for= "ej10_v2">Número 2</label>
+  <input type="number" id="ej10_v2">
+
+  <button onclick="func_ej10()">Resultado:</button>
+
+ <label for= "ej10_result"></label>
+ <input type="text" id="ej10_result">
+
+ <script> 
+        function func_ej10(){
+
+        let ej10_v1= parseInt(document.getElementById('ej10_v1').value); //parseInt= para números enteros. 
+
+        let ej10_v2= parseInt(document.getElementById('ej10_v2').value); 
+     
+
+
+    
+   
+       }
+
  </script>
 
   </body>
