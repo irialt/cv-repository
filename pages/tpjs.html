@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tp javascript</title>
+</head>
+ <body>
+    
+  <h5> Ejercicio 1 </h5>
+
+  <label for= "ej1_n1">Número 1:</label> 
+  <input type="number" id="ej1_n1">
+
+  <label for= "ej1_n2">Número 2:</label> 
+  <input type="number" id="ej1_n2">
+
+  <label for= "ej1_n3">Número 3:</label> 
+  <input type="number" id="ej1_n3">
+
+   <button onclick="func_ej1()">Comparar</button>
+
+   <label for= "ej1_resultado">Resultado:</label> 
+   <input type="text" id="ej1_resultado">
+
+   <script>
+        function func_ej1(){
+            // alert('me ejecuto dentro de una función') (comentario)
+
+           let ej1_n1= parseFloat(document.getElementById('ej1_n1').value); 
+    
+           let ej1_n2= parseFloat(document.getElementById('ej1_n2').value); 
+        
+           let ej1_n3= parseFloat(document.getElementById('ej1_n3').value); 
+        
+          
+            //comparación
+           if (ej1_n1 > ej1_n2 && ej1_n1 > ej1_n3)
+           {
+              document.getElementById('ej1_resultado'). value = "el valor " +ej1_n1+ " es el más grande";
+        
+           }
+
+           if (ej1_n2 > ej1_n1 && ej1_n2 > ej1_n3)
+
+           {
+              document.getElementById('ej1_resultado'). value = "el valor "+ej1_n2+ " es el más grande";
+        
+           }
+
+           if (ej1_n3 > ej1_n2 && ej1_n3 > ej1_n1)
+
+           {
+              document.getElementById('ej1_resultado'). value = "el valor "+ej1_n3+ " es el más grande";
+        
+           }
+
+           
+      }
+   </script>
+
+      <h5> "Ejercicio 2" </h5>
+
+      <label for= "ejer2_v1">Valor número 1:</label> 
+      <input type="number" id="ejer2_v1">
+
+      <label for= "ejer2_v2">Valor número 2:</label> 
+      <input type="number" id="ejer2_v2">
+
+      <button onclick="func_ej2()">Sumar</button>
+
+      <br>  <!--sirve como ENTER-->
+
+      <label for= "ej2_resultado">Resultado:</label> 
+      <input width="400" type="text" id="ej2_resultado">
+
+   <script>
+         function func_ej2(){
+
+           let ejer_v1= parseFloat(document.getElementById('ejer2_v1').value); 
+    
+           let ejer_v2= parseFloat(document.getElementById('ejer2_v2').value); 
+
+          let suma = ejer_v1 + ejer_v2 
+
+          
+              document.getElementById('ej2_resultado'). value = "La suma es "+suma+ "";
+        
+           }
+
+
+     </script>
+
+<h5> "Ejercicio 3" </h5>
+
+ <label for= "ej3_palabra">Palabra:</label> 
+ <input type="text" id="ej3_palabra">
+ 
+ <label for= "ej3_cantidad">Repetición:</label> 
+ <input type="number" id="ej3_cantidad">
+<button onclick="func_ej3()"> ejecutar </button>
+
+ <label for= "ej3_resultado">Resultado:</label> 
+ <input type="text" id="ej3_resultado">
+
+
+<script>
+    function func_ej3() {
+
+        let ej3_palabra= (document.getElementById('ej3_palabra').value); 
+    
+        let ej3_cantidad= parseFloat(document.getElementById('ej3_cantidad').value)
+
+        let frase= ""
+
+        for (let index = 0; index < ej3_cantidad; index++) {
+            frase= frase + ej3_palabra
+
+        }
+        document.getElementById("ej3_resultado").value= frase
+
+    }
+  
+ </script>
+
+  </body>
+
+</html>
