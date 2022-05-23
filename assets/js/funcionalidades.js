@@ -91,6 +91,39 @@
  
         }
 
+        function func_ej7(ej7_num1,ej7_num2,mult,módulo1,módulo2,múltiplos,comparten,mult){
+
+          let ej7_num1= parseInt(document.getElementById('ej7_num1').value); //parseInt= para números enteros. 
+    
+          let ej7_num2= parseInt(document.getElementById('ej7_num2').value);
+    
+          let mult = ""
+          let comparten = true
+          let múltiplos = 3
+          var módulo1, módulo2
+    
+          while (múltiplos <= ej7_num1 && múltiplos <= ej7_num2 && comparten == true) {
+          
+             módulo1 = ej7_num1%múltiplos 
+             módulo2 = ej7_num2%múltiplos 
+    
+            if (módulo1 == módulo2) {
+             mult = mult + múltiplos + ","
+    
+              múltiplos = múltiplos + 3
+    
+            }else {
+              comparten = false
+    
+            }
+    
+          }
+    
+          document.getElementById("ej7_result").value= múltiplos
+          
+       }
+
+
         function func_ej9(ej9_name,ej9_ape,ej9_age,ej9_city,ej9_frase){
 
             ej9_name= document.getElementById('ej9_name').value; //todo dentro de let
