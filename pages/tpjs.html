@@ -141,28 +141,28 @@
 
 
  <script> 
-       function func_ej4() {
+    function func_ej4() {
 
-        let far = parseFloat(ej4_fahren.value);
-        let cel = parseFloat(ej4_cel.value);
+    let far = parseFloat(ej4_fahren.value);
+    let cel = parseFloat(ej4_cel.value);
 
-        if (cel != 0 && far == 0) {  //!= desigual
-             far = (cel * 1.8) + 32
+    if (cel != 0 && far == 0) {  //!= desigual
+     far = (cel * 1.8) + 32
 
-                document.getElementById('ej4_fahren').value = far
-                document.getElementById('ej4_cel').value = 0
-                
-         }else{
+        document.getElementById('ej4_fahren').value = far
+        document.getElementById('ej4_cel').value = 0
+        
+     }else{
 
-           cel = (far - 32)*(9/5) 
+         cel = (far - 32)*(9/5) 
 
-             document.getElementById('ej4_cel').value = cel
-             document.getElementById('ej4_fahren').value = 0
+          document.getElementById('ej4_cel').value = cel
+          document.getElementById('ej4_fahren').value = 0
 
-         }
-         
-      }     
-
+      }
+ 
+   }     
+   
  </script>
 
  <h4> "Ejercicio 5" </h4>
