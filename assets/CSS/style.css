@@ -1,4 +1,4 @@
-<style>  
+
 
    img{
     display: block ;
@@ -6,9 +6,40 @@
     margin-right: auto ;
     width=50% ;
 }
-    </style>
+    <li> <a href="index.html"> 
+
+     <h1> 
+         <font color="#3629EA">Sobre mí: </font>
+
+         </h1> 
+
+     </a> 
+      </li>
+
+
+ <li> <a href="index.html"> 
+     <h1>
+            <font color="#066112"> Gustos y artistas de preferencia (mangakas) </font>
+
+       </h1> 
+
+      </a> 
+  </li>
+
+
+  <ul>
+  <li> <a href="index.html"> 
+       <h1>
+           <font color="#B310A5">Links de trabajos prácticos Programación 1:</font>
+
+           </h1> 
+           
+        </a> 
+    </li>
+ </ul>
 
     <body>
+    
         background-image: url();
         background-size: cover;
         background-position: center center;
