@@ -289,40 +289,37 @@
  <h4> "Ejercicio 8" </h4>
  <h5>Mostrar los números primos hasta un número ingresado por el usuario.</h5>
 
- <label for= "ej8_num">Número a ingresar</label>
- <input type="number" id="ej8_num">
 
- <button onclick="func_ej8(ej8_num)">Calcular</button>
+<input placeholder="Insertar número" type="number" id="ejer8num">
+      
+<button type="button" onclick="ejercicio8()">calcular</button>
 
- <script>
+<p id="ejer8result"></p>
 
-  function func_ej8(){
+<script>
+function ejercicio8(){
 
-      let numb= parseInt(num.value);
-      var primos = []
-
-     for (let index = 0; index <= numb; index++) {
-        if (esPrimo(index)) {
-           primos.push(index)
-         } 
-
-      }
-
-    alert (primos.toString())
-  }
-
-  function esPrimo(número) {
-    for (var i = 2; i < número; i++) {
-       if (número % i === 0) {
+    const num1 = parseInt(document.getElementById("ejer8num").value);
+    const resultado = document.getElementById("ejer8result");
+  
+    const esPrimo = (num) => {
+      for (let i = 2; i < num; i++) {
+        
+        if (num % i === 0) {
           return false;
+        }
 
-         }
+        return true;
+
       }
+    }
+    
+    for (let x = 0; x <= num1; x++) {
+      esPrimo(x) && (resultado.textContent = resultado.innerHTML + " | " + x);
+    }
+}
 
-     return número !== 1;
-   }
-
-  </script>
+</script>
 
  <h4> "Ejercicio 9" </h4>
  <h5>Ingresar un nombre, un apellido, una edad y una ciudad de nacimiento,  crear un párrafo y completar la siguiente frase:
